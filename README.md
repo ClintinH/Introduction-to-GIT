@@ -42,4 +42,3 @@ GNU Public License
 Always use a GPL-compatible license.
 
 Perhaps the best-known license is the GNU Public License (GPL), which guarantees the freedom of users to use, copy, and modify code. Code released under a GPL-compatible license is code that can be incorporated into another GPL-licensed codebase without modification to the license. [Reference](https://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/)
-
