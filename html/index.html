@@ -3,6 +3,21 @@
 <head>
     <title>jigsawHTMLpage</title>
     <link rel="stylesheet" href="../css/style.css">
+   
+    
+    <script>
+    function getCardId(id)
+    {
+        let element;
+        element = document.getElementById(id)
+        console.log(element)
+        element.addEventListener("click",()=>{
+            let elImage = element.getElementsByTagName("img")[0]
+            elImage.classList.add("hide")
+            console.log(elImage)
+        })
+    }    
+    </script>
 </head>
 
 <header>
@@ -12,80 +27,94 @@
     </nav>
 </header>
 
-<body>
+<body onload="getCardId('1')">
         
     <div id="main">
         <div class="row">
-            <div class="column" style="background-color:#FFB695;">
+            <div id = "1" class="column" style="background-color:#FFB695;">
                 <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card3.png" alt="card1">
                 
             </div>
             <div class="column" style="background-color:#96D1CD;">
                 <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card7.png" alt="card1">
                 
             </div>
             <div class="column" style="background-color:#cf96d1;">
                 <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card1.png" alt="card1">
                 
             </div>
             <div class="column" style="background-color:#d1d096;">
                 <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card1.png" alt="card1">
+                <img src="../Resource/image/card5.png" alt="card1">
                 
             </div>
         </div>
         <div class="row">
             <div class="column" style="background-color:#FFB695;">
                 <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card3.png" alt="card1">
                 
             </div>
             <div class="column" style="background-color:#96D1CD;">
                 <img src="../Resource/image/cardback.png" alt="card1" class= "hide">
+                <img src="../Resource/image/card7.png" alt="card1">
+                
+            </div>
+            <div class="column" style="background-color:#cf96d1;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card5.png" alt="card1">
+                
+            </div>
+            <div class="column" style="background-color:#d1d096;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card2.png" alt="card1">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="column" style="background-color:#FFB695;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card8.png" alt="card1">
+                
+            </div>
+            <div class="column" style="background-color:#96D1CD;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card6.png" alt="card1">
+                
+            </div>
+            <div class="column" style="background-color:#cf96d1;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card6.png" alt="card1">
+                
+            </div>
+            <div class="column" style="background-color:#d1d096;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card4.png" alt="card1">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="column" style="background-color:#FFB695;">
+                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card2.png" alt="card1">
+                
+            </div>
+            <div class="column" style="background-color:#96D1CD;">
+                <img src="../Resource/image/cardback.png" alt="card1">
                 <img src="../Resource/image/card1.png" alt="card1">
                 
             </div>
             <div class="column" style="background-color:#cf96d1;">
                 <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card4.png" alt="card1">
                 
             </div>
             <div class="column" style="background-color:#d1d096;">
                 <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="column" style="background-color:#FFB695;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#96D1CD;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#cf96d1;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#d1d096;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="column" style="background-color:#FFB695;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#96D1CD;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#cf96d1;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#d1d096;">
-                <img src="../Resource/image/cardback.png" alt="card1">
+                <img src="../Resource/image/card8.png" alt="card1">
                 
             </div>
         </div>
