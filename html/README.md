@@ -1,73 +1,23 @@
 # HTML helpful Information 
 
-### Tags
-An HTML tag is a piece of markup language used to indicate the beginning and end of an HTML element in an HTML document.
-As part of an HTML element, HTML tags help web browsers convert HTML documents into web pages. For example, the >p> tag is used to organize text content into paragraph elements and the >img> tag is used to embed image elements.
-Many tags, though not all, use an opening tag and closing tag to wrap around the content that they are used to modify. Closing tags are denoted with a backslash like this: </tag_name>. HTML tags are not visible in the browser.
-The following diagram illustrates how tags are commonly used in HTML elements:
-[Reference](https://www.digitalocean.com/community/tutorials/what-is-an-html-tag)
-
-### Padding
-An element's padding area is the space between its content and its border. Padding creates extra space within an element.
-This property is a shorthand for the following CSS properties:
-padding-bottom
-padding-left
-padding-right
-padding-top
-[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
-
-### Margin
-The margin property defines the space around an HTML element. It is possible to use negative values to overlap content.
-The values of the margin property are not inherited by the child elements. Remember that the adjacent vertical margins (top and bottom margins) will collapse into each other so that the distance between the blocks is not the sum of the margins, but only the greater of the two margins or the same size as one margin if both are equal.
-We have the following properties to set an element margin.
-⦁	The margin specifies a shorthand property for setting the margin properties in one declaration.
-⦁	The margin-bottom specifies the bottom margin of an element.
-⦁	The margin-top specifies the top margin of an element.
-⦁	The margin-left specifies the left margin of an element.
-⦁	The margin-right specifies the right margin of an element.
-[Reference](https://www.tutorialspoint.com/css/css_margins.htm#:~:text=The%20margin%20property%20defines%20the,negative%20values%20to%20overlap%20content.&text=The%20margin%2Dbottom%20specifies%20the,left%20margin%20of%20an%20element)
-
-### The Body Tag 
-The >body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within >html>tag. The >body> tag is the last child of >html> tag. A body tag contains starting as well as an ending tag. [Reference](https://www.geeksforgeeks.org/html-body-tag/#:~:text=The%20tag%20in%20HTML,present%20inside%20an%20HTML%20page.&text=Attributes%3A%20There%20are%20many%20attributes,to%20set%20the%20background%20image)
-
-### The Header Tag
-The >header> HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
-Usage: The >header> element is not sectioning content and therefore does not introduce a new section in the outline. That said, a >header> element is intended to usually contain the surrounding section's heading (an h1–h6 element), but this is not required.
-[Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
-
-### The DocType Tag
->!DOCTYPE html>
-The HTML document type declaration, also known as DOCTYPE, is the first line of code required in every HTML or XHTML document. The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
-[Reference](https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/#:~:text=The%20HTML%20document%20type%20declaration,way%20by%20different%20web%20browsers)
-
-## HTML List Tags
->html>>/html>
->!DOCTYPE html>
->title> this is heading<\title>
->Body>this is the body>/body>
->div>>/div>
->span>>/span>
->a href="https://www.ggogle.com">google</a>.
->table>>/table>
->thead>>/thead>
->tr>>td>Value1>/td>>td>Value2>/td>>/tr>
-?script>
->!-- javascript code -->
->/script>
-
->img src=https://bitarray.io/images.logo.png alt="bitarray logo">
->strong> this is strong text>/strong>
+## HTML Common Tag list
+\<html>>/html>
+\<!DOCTYPE html>
+\<title> this is heading<\title>
+\<Body>this is the body>/body>
+\<div>>/div>
+\<span>>/span>
+\<a href="https://www.ggogle.com">google</a>.
+\<table>>/table>
+\<thead>>/thead>
+\<tr>>td>Value1>/td>>td>Value2>/td>>/tr>
+\<script>
+\<!-- javascript code -->
+\</script>
+\<img src=https://bitarray.io/images.logo.png alt="bitarray logo">
+\<strong> this is strong text>/strong>
 
 [Reference](https://www.bitarray.io/20-html-tags-you-need-to-know/)
-
-### Code Reveiw
-Code Review, also known as Peer Code Review, is the act of consciously and systematically convening with one’s fellow programmers to check each other’s code for mistakes and has been repeatedly shown to accelerate and streamline the process of software development like few other practices can. There are peer code review tools and software, but the concept itself is important to understand. Software is written by human beings. Software is therefore often riddled with mistakes. To err is, of course, human, so this is an obvious correlation. But what isn’t so obvious is why software developers often rely on manual or automated testing to vet their code to the neglect of that other great gift of human nature: the ability to see and correct mistakes ourselves.
-
-### REVIEWER
-is a person who reviews the pull request. A project owner can request review from any of the maintainers, They can even set an option so that the pull request can be merged only if it is reviewed by one of the maintainer with write access.
-
-### ASSIGNEE 
-is a person who is working on specific issues and pull requests. It is sometimes confused as a reviewer. It is actually meant to be used with issues rather than pull request so that when we receive a issue we can assign someone to fix it. In a pull request, an assignee refers to a person who's in charge of merging that pull request after getting comments and change requests from other maintainers.
 
 ### HTML: HyperText Markup Language
 HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
@@ -97,7 +47,7 @@ Older version of HTML are less mobile-friendly.
 Attributes like charset, async and ping are absent in HTML.
 
 ### HTML5
-- It supports audio and video controls with the use of >audio> and >video> tags.
+- It supports audio and video controls with the use of \<audio> and \<video> tags.
 - It uses SQL databases and application cache to store offline data.
 - Allows JavaScript to run in background. This is possible due to JS Web worker API in HTML5.
 Vector graphics is additionally an integral a part of HTML5 like SVG and canvas.
@@ -113,10 +63,6 @@ HTML5 allows to draw shapes like circle, rectangle, triangle etc.
 Attributes of charset, async and ping are a part of HTML 5.
 [Reference](https://www.geeksforgeeks.org/difference-between-html-and-html5/)
 
-### ESLint
- is a static code analysis tool for identifying problematic patterns found in JavaScript code. It was created by Nicholas C. Zakas in 2013.[1][2] Rules in ESLint are configurable, and customized rules can be defined and loaded. ESLint covers both code quality and coding style issues. ESLint supports current standards of ECMAScript, and experimental syntax from drafts for future standards. Code using JSX or TypeScript can also be processed when a plugin or transpiler is used
-[Reference](https://en.wikipedia.org/wiki/ESLint)
-
 ### HTML Tag Properties
 The html tag properties can be difined by adding atributes =.
 
@@ -128,3 +74,43 @@ HTML Attributes
     Attributes are always specified in the start tag
     Attributes usually come in name/value pairs like: name="value"
 [Reference](https://www.w3schools.com/html/html_attributes.asp)
+
+### Tags
+An HTML tag is a piece of markup language used to indicate the beginning and end of an HTML element in an HTML document.
+As part of an HTML element, HTML tags help web browsers convert HTML documents into web pages. For example, the \<p> tag is used to organize text content into paragraph elements and the \<img> tag is used to embed image elements.
+Many tags, though not all, use an opening tag and closing tag to wrap around the content that they are used to modify. Closing tags are denoted with a backslash like this: </tag_name>. HTML tags are not visible in the browser.
+The following diagram illustrates how tags are commonly used in HTML elements:
+[Reference](https://www.digitalocean.com/community/tutorials/what-is-an-html-tag)
+
+### The DocType Tag
+\<!DOCTYPE html>
+The HTML document type declaration, also known as DOCTYPE, is the first line of code required in every HTML or XHTML document. The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
+[Reference](https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/#:~:text=The%20HTML%20document%20type%20declaration,way%20by%20different%20web%20browsers)
+
+### The Header Tag
+The \<header> HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+Usage: The >header> element is not sectioning content and therefore does not introduce a new section in the outline. That said, a \<header> element is intended to usually contain the surrounding section's heading (an h1–h6 element), but this is not required.
+[Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
+
+### The Body Tag 
+The \<body> tag in HTML is used to define the main content present inside an HTML page. It is always enclosed within >html>tag. The \<body> tag is the last child of \<html> tag. A body tag contains starting as well as an ending tag. [Reference](https://www.geeksforgeeks.org/html-body-tag/#:~:text=The%20tag%20in%20HTML,present%20inside%20an%20HTML%20page.&text=Attributes%3A%20There%20are%20many%20attributes,to%20set%20the%20background%20image)
+
+### Padding
+An element's padding area is the space between its content and its border. Padding creates extra space within an element.
+This property is a shorthand for the following CSS properties:
+padding-bottom
+padding-left
+padding-right
+padding-top
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+
+### Margin
+The margin property defines the space around an HTML element. It is possible to use negative values to overlap content.
+The values of the margin property are not inherited by the child elements. Remember that the adjacent vertical margins (top and bottom margins) will collapse into each other so that the distance between the blocks is not the sum of the margins, but only the greater of the two margins or the same size as one margin if both are equal.
+We have the following properties to set an element margin.
+⦁	The margin specifies a shorthand property for setting the margin properties in one declaration.
+⦁	The margin-bottom specifies the bottom margin of an element.
+⦁	The margin-top specifies the top margin of an element.
+⦁	The margin-left specifies the left margin of an element.
+⦁	The margin-right specifies the right margin of an element.
+[Reference](https://www.tutorialspoint.com/css/css_margins.htm#:~:text=The%20margin%20property%20defines%20the,negative%20values%20to%20overlap%20content.&text=The%20margin%2Dbottom%20specifies%20the,left%20margin%20of%20an%20element)

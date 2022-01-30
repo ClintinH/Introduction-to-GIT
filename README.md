@@ -33,6 +33,20 @@ Unstaged changes are changes that are not tracked by the Git. For example, if yo
 
 ### What is a Branch
 A branch represents an independent line of development. Branches serve as an abstraction for the edit/stage/commit process. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.The git branch command lets you create, list, rename, and delete branches. It doesn’t let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. [Reference]( https://www.atlassian.com/git/tutorials/using-branches#:~:text=A%20branch%20represents%20an%20independent%20line%20of%20development.) 
+
+### Code Reveiw
+Code Review, also known as Peer Code Review, is the act of consciously and systematically convening with one’s fellow programmers to check each other’s code for mistakes and has been repeatedly shown to accelerate and streamline the process of software development like few other practices can. There are peer code review tools and software, but the concept itself is important to understand. Software is written by human beings. Software is therefore often riddled with mistakes. To err is, of course, human, so this is an obvious correlation. But what isn’t so obvious is why software developers often rely on manual or automated testing to vet their code to the neglect of that other great gift of human nature: the ability to see and correct mistakes ourselves.
+
+### REVIEWER
+is a person who reviews the pull request. A project owner can request review from any of the maintainers, They can even set an option so that the pull request can be merged only if it is reviewed by one of the maintainer with write access.
+
+### ASSIGNEE 
+is a person who is working on specific issues and pull requests. It is sometimes confused as a reviewer. It is actually meant to be used with issues rather than pull request so that when we receive a issue we can assign someone to fix it. In a pull request, an assignee refers to a person who's in charge of merging that pull request after getting comments and change requests from other maintainers.
+
+### ESLint (Ecma Script Lint)
+ is a static code analysis tool for identifying problematic patterns found in JavaScript code. It was created by Nicholas C. Zakas in 2013.[1][2] Rules in ESLint are configurable, and customized rules can be defined and loaded. ESLint covers both code quality and coding style issues. ESLint supports current standards of ECMAScript, and experimental syntax from drafts for future standards. Code using JSX or TypeScript can also be processed when a plugin or transpiler is used
+[Reference](https://en.wikipedia.org/wiki/ESLint)
+
 ### What is a SSH key
 SSH keys come in many sizes, but a popular choice is an RSA 2048-bit encryption, which is comparable to a 617 digit long password. SSH keys always come in pairs, and every pair is made up of a private key and a public key. Who or what possesses these keys determines the type of SSH key pair. If the private key and the public key remain with the user, this set of SSH keys is referred to as user keys.
 If the private and public keys are on a remote system, then this key pair is referred to as host keys. Another type of SSH key is a session key. When a large amount of data is being transmitted, session keys are used to encrypt this information. [Reference]( https://jumpcloud.com/blog/what-are-ssh-keys)
