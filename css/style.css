@@ -1,0 +1,40 @@
+body {
+    background-color: #d9ff00;
+    height: 100%;
+}
+
+header, body, footer, nav, div, p, h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.importantText{
+    color:rgb(255, 255, 255);
+    font-style: italic;
+}
+
+header {
+    background-color:crimson;
+}
+
+#main{
+    background-color:lawngreen;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 500px;
+}
