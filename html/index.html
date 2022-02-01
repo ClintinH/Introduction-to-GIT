@@ -8,14 +8,12 @@
     <script>
     function getCardId(id)
     {
-        let element;
-        element = document.getElementById(id)
-        console.log(element)
-        element.addEventListener("click",()=>{
+        let element = document.getElementById(id)
+        let callback = ()=>{
             let elImage = element.getElementsByTagName("img")[0]
-            elImage.classList.add("hide")
-            console.log(elImage)
-        })
+            elImage.classList.add("hide")            
+        }
+        element.addEventListener("click",callback)
     }    
     </script>
 </head>
@@ -27,97 +25,46 @@
     </nav>
 </header>
 
-<body onload="getCardId('1')">
+<body>
         
     <div id="main">
-        <div class="row">
-            <div id = "1" class="column" style="background-color:#FFB695;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card3.png" alt="card1">
+       
+        <script>
+
+            let mainDiv = document.getElementById("main")
+            let cardIds = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8]
+            cardIds.sort(()=> 0.5 - Math.random())
+            
+            for (let i = 0 ; i < 4 ; i++) {                
+                let rowDiv = document.createElement("div")                
+                rowDiv.classList.add("row")
+                mainDiv.appendChild(rowDiv)
+
+                for (let j = 0 ; j < 4 ; j++) {
+                    let columnDiv = document.createElement("div")
+                    columnDiv.id = j + 1;
+                    columnDiv.classList.add("column")                
+                    rowDiv.appendChild(columnDiv)
+
+                    let img = document.createElement("img")
+                    img.src = "../Resource/image/cardback.png";
+                    columnDiv.appendChild(img)
+
+                    let img2 = document.createElement("img")
+                    
+                    img2.src = "../Resource/image/card"+ cardIds.pop() +".png";
+                    columnDiv.appendChild(img2)
+
+                    let callback = ()=>{                    
+                        img.classList.add("hide")            
+                    }
+                    columnDiv.addEventListener("click",callback)
+                }  
                 
-            </div>
-            <div class="column" style="background-color:#96D1CD;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card7.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#cf96d1;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card1.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#d1d096;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card5.png" alt="card1">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="column" style="background-color:#FFB695;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card3.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#96D1CD;">
-                <img src="../Resource/image/cardback.png" alt="card1" class= "hide">
-                <img src="../Resource/image/card7.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#cf96d1;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card5.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#d1d096;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card2.png" alt="card1">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="column" style="background-color:#FFB695;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card8.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#96D1CD;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card6.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#cf96d1;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card6.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#d1d096;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card4.png" alt="card1">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="column" style="background-color:#FFB695;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card2.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#96D1CD;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card1.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#cf96d1;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card4.png" alt="card1">
-                
-            </div>
-            <div class="column" style="background-color:#d1d096;">
-                <img src="../Resource/image/cardback.png" alt="card1">
-                <img src="../Resource/image/card8.png" alt="card1">
-                
-            </div>
-        </div>
+            } 
+
+        </script>
+
     </div>
     
 
