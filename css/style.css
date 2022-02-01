@@ -59,3 +59,17 @@ header {
 .hide {
     display: none;
 }
+
+div img {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+}
+
+div img:nth-child(1){
+    z-index: 1;
+}
+
+div img:nth-child(2){
+    z-index: 0;
+}
