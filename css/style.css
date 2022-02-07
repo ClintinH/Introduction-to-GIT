@@ -1,5 +1,5 @@
 body {
-    background-color: #d9ff00;
+    background-color: #000000;
     height: 100%;
 }
 
@@ -13,7 +13,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: rgb(43, 43, 43);
     color: white;
     text-align: center;
 }
@@ -28,15 +28,16 @@ footer {
 }
 
 header {
-    background-color:crimson;
+    background-color:rgb(43, 43, 43);
+    padding-bottom: 22px;
 }
 
 #main {
-    background-color:lawngreen;
+    background-color:rgb(255, 0, 0);
     margin-left: auto;
     margin-right: auto;
-    height: 550px;
-    width: 550px;
+    height: 520px;
+    width: 520px;
 }
 
 .column {
@@ -58,4 +59,25 @@ header {
 
 .hide {
     display: none;
+<<<<<<< Updated upstream
+=======
+}
+
+div img {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+}
+
+div img:nth-child(1){
+    z-index: 1;
+}
+
+div img:nth-child(2){
+    z-index: 0;
+}
+
+a {
+    color:crimson;
+>>>>>>> Stashed changes
 }
