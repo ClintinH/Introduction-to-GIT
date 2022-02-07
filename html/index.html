@@ -4,18 +4,6 @@
     <title>jigsawHTMLpage</title>
     <link rel="stylesheet" href="../css/style.css">
    
-    
-    <script>
-    function getCardId(id)
-    {
-        let element = document.getElementById(id)
-        let callback = ()=>{
-            let elImage = element.getElementsByTagName("img")[0]
-            elImage.classList.add("hide")            
-        }
-        element.addEventListener("click",callback)
-    }    
-    </script>
 </head>
 
 <header>
@@ -31,9 +19,14 @@
        
         <script>
 
+            let firstClicked = null;
+            let pairMatchedTotal = null;
+            let matchCounter = 0;
+            let listOfCards = [];
             let mainDiv = document.getElementById("main")
             let cardIds = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8]
             cardIds.sort(()=> 0.5 - Math.random())
+            pairMatchedTotal = cardIds.length/2;
             
             for (let i = 0 ; i < 4 ; i++) {                
                 let rowDiv = document.createElement("div")                
@@ -46,21 +39,80 @@
                     columnDiv.classList.add("column")                
                     rowDiv.appendChild(columnDiv)
 
-                    let img = document.createElement("img")
-                    img.src = "../Resource/image/cardback.png";
-                    columnDiv.appendChild(img)
+                    let cardback = document.createElement("img")
+                    cardback.src = "../Resource/image/cardback.png";
+                    cardback.cardId = cardIds.pop();
+                    columnDiv.appendChild(cardback)
 
-                    let img2 = document.createElement("img")
-                    
-                    img2.src = "../Resource/image/card"+ cardIds.pop() +".png";
-                    columnDiv.appendChild(img2)
+                    let cardfront = document.createElement("img")
+                    cardfront.staticId = i + "-" + j;
+                    cardfront.src = "../Resource/image/card"+ cardback.cardId +".png";
+                    columnDiv.appendChild(cardfront)
 
-                    let callback = ()=>{                    
-                        img.classList.add("hide")            
+                    let callback = ()=> { 
+
+                        if(firstClicked != null && firstClicked.front.staticId == cardfront.staticId) {
+
+                            return;
+
+                        }
+                        
+                        cardback.classList.add("hide")
+
+                       if (firstClicked == null) {
+
+                          firstClicked = {
+
+                            back: cardback,
+                            front: cardfront
+
+                          };
+                       }
+                       else if(firstClicked.back.cardId === cardback.cardId) {
+                            setTimeout(()=> { 
+                                cardfront.classList.add("hide")
+                                firstClicked.front.classList.add("hide")
+                                firstClicked = null;
+                                matchCounter ++;
+                                if(matchCounter === pairMatchedTotal) {
+
+                                    alert("Game Over")
+
+                                    cardIds = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8]
+                                    cardIds.sort(()=> 0.5 - Math.random())
+
+                                    for(let k = 0 ; k < listOfCards.length ; k++) {
+
+                                        let card = listOfCards[k]
+                                        card.back.cardId = cardIds.pop();
+                                        card.front.src = "../Resource/image/card"+ card.back.cardId +".png";
+                                        card.front.classList.remove("hide")
+                                        card.back.classList.remove("hide")
+
+                                    }  
+                                    matchCounter = 0;
+                               
+                                }
+                            },1000)
+
+                       }
+                       else {
+                            setTimeout(()=> {    
+                                cardback.classList.remove("hide")
+                                firstClicked.back.classList.remove("hide")
+                                firstClicked = null;
+                            },1000)
+                       }
                     }
                     columnDiv.addEventListener("click",callback)
-                }  
-                
+
+                    listOfCards.push({
+                        
+                        back: cardback,
+                        front: cardfront
+                    
+                    })  
+                }              
             } 
 
         </script>
