@@ -59,8 +59,6 @@ header {
 
 .hide {
     display: none;
-<<<<<<< Updated upstream
-=======
 }
 
 div img {
@@ -79,5 +77,4 @@ div img:nth-child(2){
 
 a {
     color:crimson;
->>>>>>> Stashed changes
 }
